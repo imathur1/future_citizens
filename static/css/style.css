@@ -12,6 +12,13 @@
   background-image: -ms-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
 }
 
+
+/* Custom */
+.custom-control-input:checked~.custom-control-label::before {
+  background-color: #ff663b;
+  border-color: #ff663b;
+}
+
 /**************** extend css start ****************/
 /**************** common css start ****************/
 /* line 3, E:/172 Etrain Education/172_Etrain_Education_html/sass/_common.scss */
@@ -2588,7 +2595,7 @@ ul {
   font-size: 55px;
   text-transform: capitalize;
   font-weight: 700;
-  margin-bottom: 27px;
+  margin-bottom: 10px;
   line-height: 1.18;
 }
 

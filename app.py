@@ -1,3 +1,4 @@
+import pickle
 import requests
 from flask import Flask, request, json, jsonify, render_template
 
@@ -7,25 +8,23 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/learn")
-def learn():
-    return render_template("learn.html")
-
-@app.route("/citizenship-process")
-def citizenship_process():
-    return render_template("citizenship_process.html")
-
-@app.route("/visas")
-def visas():
-    return render_template("visas.html")
+@app.route("/naturalization")
+def naturalization():
+    return render_template("naturalization.html")
 
 @app.route("/green-cards")
 def green_cards():
     return render_template("green_cards.html")
 
-@app.route("/practice")
+@app.route("/practice", methods=["GET", "POST"])
 def practice():
-    return render_template("practice.html")
+    if request.method == "POST":
+        with open ('questions', 'rb') as fp:
+            questions = pickle.load(fp)
+            return jsonify(questions)
+        return jsonify("Error")
+    else:
+        return render_template("practice.html")
 
 @app.route("/calculator")
 def calculator():
