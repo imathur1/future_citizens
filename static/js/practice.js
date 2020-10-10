@@ -66,6 +66,10 @@ function getQuestions() {
             });
             $("#next").on("click", function() {
                 count += 1;
+                if (count === questions.length) {
+                    shuffle(questions);
+                    count = 0;
+                }
                 $("#question").html(questions[count][0]);
                 $("#answer1").html(questions[count][2][0]);
                 $("#answer2").html(questions[count][2][1]);
