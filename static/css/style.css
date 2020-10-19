@@ -5560,11 +5560,11 @@ h1, h2, h3, h4, h5, h6 {
 .unordered-list li:before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: 3px solid #ff663b;
   background: #fff;
-  top: 4px;
+  top: 7px;
   left: 0;
   border-radius: 50%;
 }
@@ -6866,7 +6866,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1, E:/172 Etrain Education/172_Etrain_Education_html/sass/_breadcrumb.scss */
 .breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
+  background-image: url("../img/green_cards.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.breadcrumb_bg2 {
+  background-image: url("../img/naturalization.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
